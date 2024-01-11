@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "biomesquisher",
+  "version": "0.1.6-alpha",
+  "name": "Biome Squisher",
+  "description": "Squishes biomes to make room! Very WIP.",
+  "authors": [
+    "Luke Bemish",
+    "Treetrain1"
+  ],
+  "contact": {
+    "sources": "https://github.com/Treetrain1/BiomeSquisher",
+    "issues": "https://github.com/Treetrain1/BiomeSquisher/issues"
+  },
+  "license": "BSD-3-clause",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.lukebemish.biomesquisher.impl.fabric.BiomeSquisherMod"
+    ]
+  },
+  "mixins": [
+    "biomesquisher.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*",
+    "fabricloader": "*"
+  }
+}

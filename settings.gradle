@@ -13,10 +13,6 @@ pluginManagement {
             name = "Luke's Maven"
             url = 'https://maven.lukebemish.dev/releases/'
         }
-        maven {
-            name = 'Architectury'
-            url "https://maven.architectury.dev/"
-        }
 	}
 }
 
@@ -36,7 +32,7 @@ gradleEnterprise {
 
 rootProject.name = "biomesquisher"
 
-include 'common', 'fabric', 'neoforge'
+include 'common', 'fabric'
 
 buildCache {
     if (providers.gradleProperty('buildCacheUrl').orNull) {

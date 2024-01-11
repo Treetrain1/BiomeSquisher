@@ -53,19 +53,7 @@ tasks.named('compileJava', JavaCompile).configure {
     source(project(":common").sourceSets.main.allSource)
 }
 
-import io.github.groovymc.modsdotgroovy.ConvertToFabricJsonTask
-var testMdg = tasks.register('testModsDotGroovyToFabricJson', ConvertToFabricJsonTask) {
-    input.set new File(project(':common').sourceSets.test.resources.srcDirs.find(), "mods.groovy")
-    dependsOn(project(':common').configurations.modsDotGroovy)
-    dslClasspath.from(project(':common').configurations.modsDotGroovy)
-}
-
 processTestResources {
-    dependsOn testMdg
-    exclude 'mods.groovy'
-    from(testMdg.get().output.get().asFile) {
-        into ''
-    }
     from project(":common").sourceSets.test.resources
 }
 

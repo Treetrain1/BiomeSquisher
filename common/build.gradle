@@ -4,11 +4,6 @@ loom {
     }
 }
 
-configurations {
-    compileOnly.extendsFrom modsDotGroovy
-    testCompileOnly.extendsFrom modsDotGroovy
-}
-
 dependencies {
     modCompileOnly libs.fabric.loader
 
